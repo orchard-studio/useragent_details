@@ -30,12 +30,12 @@
 				Symphony::Configuration()->set('geoplugin', 'no', 'useragent_details');
 			}
 			
-			return Administration::instance()->saveConfig();
+			return Administration::Configuration()->write();
 		}
 		
 		public function uninstall() {
 			Symphony::Configuration()->remove('useragent_details');
-			return Administration::instance()->saveConfig();
+			return Administration::Configuration()->write();
 		}
 		
 		
